@@ -1,0 +1,16 @@
+{
+  "name": "coding",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha **/*.spec.js --no-timeout"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^8.1.2"
+  },
+  "author": "Wen Jun",
+  "license": "UNLICENSED",
+  "private": true
+}
