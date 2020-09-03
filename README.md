@@ -16,3 +16,4 @@
   - 希尔排序(ShellSort.js)
   - 归并排序(MergeSort.js)
   - 堆排序(HeapSort.js)
+  - 快速排序(QuickSort.js)
