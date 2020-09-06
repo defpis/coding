@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "mocha **/*.spec.js --no-timeout"
+    "test": "mocha **/*.spec.js --no-timeout",
+    "test:watch": "yarn run test --watch src"
   },
   "dependencies": {},
   "devDependencies": {

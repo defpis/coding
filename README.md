@@ -4,8 +4,8 @@
 
 ## 数据结构
 
-- 数组
-- 链表
+- 链表(linked-list)
+- 二叉树(binary-tree)
 
 ## 算法
 
