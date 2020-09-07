@@ -17,3 +17,8 @@
   - 归并排序(MergeSort.js)
   - 堆排序(HeapSort.js)
   - 快速排序(QuickSort.js)
+
+## 问题
+
+- 斐波那契数列(FibSeq.js)
+- 凑零钱(ChargeCoins.js)

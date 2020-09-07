@@ -16,4 +16,8 @@ describe("ChargeCoins", () => {
     expect(chargeCoins(coins, 0)).to.equal(0);
     done();
   });
+  it("charge 101", (done) => {
+    expect(chargeCoins(coins, 101)).to.equal(2);
+    done();
+  });
 });
