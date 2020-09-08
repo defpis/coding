@@ -1,9 +1,16 @@
 const { expect } = require("chai");
-const LinkedList = require("./LinkedList");
+const { linkedList, linkedListWithLoop } = require("./LinkedList");
+const findLoop = require("./FindLoop");
 
 describe("LinkedList", () => {
-  it("should exports be defined", (done) => {
-    expect(LinkedList).to.be.ok;
-    done();
+  describe("FindLoop", () => {
+    it("should findLoop return false", (done) => {
+      expect(findLoop(linkedList)).to.equal(false);
+      done();
+    });
+    it("should findLoop return true", (done) => {
+      expect(findLoop(linkedListWithLoop)).to.equal(true);
+      done();
+    });
   });
 });

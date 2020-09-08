@@ -2,10 +2,6 @@ const { expect } = require("chai");
 const climbStairs = require("./ClimbStairs");
 
 describe("ClimbStairs", () => {
-  it("should exports be defined", (done) => {
-    expect(climbStairs).to.be.ok;
-    done();
-  });
   it("0 stairs", (done) => {
     expect(climbStairs(0)).to.equal(0);
     done();

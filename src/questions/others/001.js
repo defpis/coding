@@ -5,7 +5,7 @@ dispatch.a.b() // 'a-b'
 dispatch.a.b.c() // 'a-b-c'
 */
 
-const newDispatch = () => {
+const makeDispatch = () => {
   const result = [];
   const dispatch = new Proxy(
     () => {
@@ -21,4 +21,5 @@ const newDispatch = () => {
   return dispatch;
 };
 
-const dispatch = newDispatch();
+const dispatch = makeDispatch();
+console.log(dispatch.a.b.c()); // a-b-c

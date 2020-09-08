@@ -2,10 +2,6 @@ const { expect } = require("chai");
 const fibSeq = require("./FibSeq");
 
 describe("FibSeq", () => {
-  it("should exports be defined", (done) => {
-    expect(fibSeq).to.be.ok;
-    done();
-  });
   it("calc 0", (done) => {
     expect(fibSeq(0)).to.equal(0);
     done();
