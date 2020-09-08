@@ -22,3 +22,4 @@
 
 - 斐波那契数列(FibSeq.js)
 - 凑零钱(ChargeCoins.js)
+- 爬梯子(ClimbStairs.js)
