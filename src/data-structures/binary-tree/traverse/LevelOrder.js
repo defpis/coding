@@ -1,7 +1,7 @@
 function helper(root, res) {
   let last,
     nLast = root;
-  const queue = [root];
+  const queue = root ? [root] : [];
   let level = [];
   while (queue.length) {
     const n = queue.shift();
@@ -22,10 +22,10 @@ function helper(root, res) {
   }
 }
 
-function LevelOrder(root) {
+function levelOrder(root) {
   const res = [];
   helper(root, res);
   return res;
 }
 
-module.exports = LevelOrder;
+module.exports = levelOrder;

@@ -1,25 +1,41 @@
 const { expect } = require("chai");
 const { binaryTree } = require("./BinaryTree");
-const PreOrder = require("./traverse/Preorder");
-const InOrder = require("./traverse/InOrder");
-const PostOrder = require("./traverse/PostOrder");
-const LevelOrder = require("./traverse/LevelOrder");
+const preOrder = require("./traverse/Preorder");
+const inOrder = require("./traverse/InOrder");
+const postOrder = require("./traverse/PostOrder");
+const levelOrder = require("./traverse/LevelOrder");
 
 describe("BinaryTree", () => {
+  it("should traverse empty by pre-order", (done) => {
+    expect(preOrder()).to.deep.equal([]);
+    done();
+  });
   it("should traverse by pre-order", (done) => {
-    expect(PreOrder(binaryTree)).to.deep.equal([1, 2, 3, 4, 5, 6, 7]);
+    expect(preOrder(binaryTree)).to.deep.equal([1, 2, 3, 4, 5, 6, 7]);
+    done();
+  });
+  it("should traverse empty by in-order", (done) => {
+    expect(inOrder()).to.deep.equal([]);
     done();
   });
   it("should traverse by in-order", (done) => {
-    expect(InOrder(binaryTree)).to.deep.equal([3, 2, 4, 1, 6, 5, 7]);
+    expect(inOrder(binaryTree)).to.deep.equal([3, 2, 4, 1, 6, 5, 7]);
+    done();
+  });
+  it("should traverse empty by post-order", (done) => {
+    expect(postOrder()).to.deep.equal([]);
     done();
   });
   it("should traverse by post-order", (done) => {
-    expect(PostOrder(binaryTree)).to.deep.equal([3, 4, 2, 6, 7, 5, 1]);
+    expect(postOrder(binaryTree)).to.deep.equal([3, 4, 2, 6, 7, 5, 1]);
+    done();
+  });
+  it("should traverse empty by level-order", (done) => {
+    expect(levelOrder()).to.deep.equal([]);
     done();
   });
   it("should traverse by level-order", (done) => {
-    expect(LevelOrder(binaryTree)).to.deep.equal([[1], [2, 5], [3, 4, 6, 7]]);
+    expect(levelOrder(binaryTree)).to.deep.equal([[1], [2, 5], [3, 4, 6, 7]]);
     done();
   });
 });
