@@ -3,10 +3,10 @@
 function maxDepth(root) {
   if (!root) return 0;
 
-  left_depth = maxDepth(root.left);
-  right_depth = maxDepth(root.right);
+  resL = maxDepth(root.left);
+  resR = maxDepth(root.right);
 
-  return Math.max(left_depth, right_depth) + 1;
+  return Math.max(resL, resR) + 1;
 }
 */
 

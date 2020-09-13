@@ -7,6 +7,9 @@ const levelOrder = require("./traverse/LevelOrder");
 const maxDepth = require("./MaxDepth");
 const isSymmetric = require("./isSymmetric");
 const hasPathSum = require("./PathSum");
+const inOrderAndPostOrder = require("./build/InOrderAndPostOrder");
+const preOrderAndInOrder = require("./build/preOrderAndInOrder");
+const connect = require("./Connect");
 
 describe("BinaryTree", () => {
   describe("Traverse", () => {
@@ -103,6 +106,87 @@ describe("BinaryTree", () => {
         -5
       )
     ).to.deep.equal([[-2, -3]]);
+    done();
+  });
+  describe("Build", () => {
+    it("should build btree by in-order and post-order", (done) => {
+      expect(
+        inOrderAndPostOrder([9, 3, 15, 20, 7], [9, 15, 7, 20, 3])
+      ).to.deep.equal({
+        val: 3,
+        left: {
+          val: 9,
+          left: null,
+          right: null,
+        },
+        right: {
+          val: 20,
+          left: {
+            val: 15,
+            left: null,
+            right: null,
+          },
+          right: {
+            val: 7,
+            left: null,
+            right: null,
+          },
+        },
+      });
+      done();
+    });
+    it("should build btree by pre-order and in-order", (done) => {
+      expect(
+        preOrderAndInOrder([3, 9, 20, 15, 7], [9, 3, 15, 20, 7])
+      ).to.deep.equal({
+        val: 3,
+        left: {
+          val: 9,
+          left: null,
+          right: null,
+        },
+        right: {
+          val: 20,
+          left: {
+            val: 15,
+            left: null,
+            right: null,
+          },
+          right: {
+            val: 7,
+            left: null,
+            right: null,
+          },
+        },
+      });
+      done();
+    });
+  });
+  it("should populate next right pointers in each node", (done) => {
+    const root = {
+      val: 1,
+      left: {
+        val: 2,
+      },
+      right: {
+        val: 3,
+      },
+    };
+    expect(connect(root)).to.deep.equal({
+      val: 1,
+      left: {
+        val: 2,
+        next: {
+          val: 3,
+          next: null,
+        },
+      },
+      right: {
+        val: 3,
+        next: null,
+      },
+      next: null,
+    });
     done();
   });
 });
