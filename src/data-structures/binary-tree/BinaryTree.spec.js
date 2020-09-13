@@ -5,6 +5,7 @@ const inOrder = require("./traverse/InOrder");
 const postOrder = require("./traverse/PostOrder");
 const levelOrder = require("./traverse/LevelOrder");
 const maxDepth = require("./MaxDepth");
+const isSymmetric = require("./isSymmetric");
 
 describe("BinaryTree", () => {
   describe("Traverse", () => {
@@ -27,6 +28,31 @@ describe("BinaryTree", () => {
   });
   it("should return max depth", (done) => {
     expect(maxDepth(binaryTree)).to.equal(3);
+    done();
+  });
+  it("should check tree is symmetric or not", (done) => {
+    /*
+           1
+        2     2
+      2     2
+    */
+    expect(
+      isSymmetric({
+        val: 1,
+        left: {
+          val: 2,
+          left: {
+            val: 2,
+          },
+        },
+        right: {
+          val: 2,
+          left: {
+            val: 2,
+          },
+        },
+      })
+    ).to.equal(false);
     done();
   });
 });
