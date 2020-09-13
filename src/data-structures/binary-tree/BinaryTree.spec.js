@@ -6,6 +6,7 @@ const postOrder = require("./traverse/PostOrder");
 const levelOrder = require("./traverse/LevelOrder");
 const maxDepth = require("./MaxDepth");
 const isSymmetric = require("./isSymmetric");
+const hasPathSum = require("./PathSum");
 
 describe("BinaryTree", () => {
   describe("Traverse", () => {
@@ -53,6 +54,55 @@ describe("BinaryTree", () => {
         },
       })
     ).to.equal(false);
+    done();
+  });
+  it("should has path sum equal to 13", (done) => {
+    expect(
+      hasPathSum(
+        {
+          val: 1,
+          left: {
+            val: 2,
+            left: {
+              val: 3,
+              left: {
+                val: 7,
+              },
+            },
+            right: {
+              val: 4,
+            },
+          },
+          right: {
+            val: 5,
+            left: {
+              val: 6,
+            },
+            right: {
+              val: 7,
+            },
+          },
+        },
+        13
+      )
+    ).to.deep.equal([
+      [1, 2, 3, 7],
+      [1, 5, 7],
+    ]);
+    done();
+  });
+  it("should has path sum equal to -5", (done) => {
+    expect(
+      hasPathSum(
+        {
+          val: -2,
+          right: {
+            val: -3,
+          },
+        },
+        -5
+      )
+    ).to.deep.equal([[-2, -3]]);
     done();
   });
 });
