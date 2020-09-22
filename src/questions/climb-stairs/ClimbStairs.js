@@ -2,6 +2,7 @@
 // 方法一：自顶而下
 function climbStairs(stairs) {
   const cache = {};
+
   function dp(n) {
     if (cache[n]) return cache[n];
     if (n <= 0) return 0;

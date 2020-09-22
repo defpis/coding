@@ -23,3 +23,7 @@
 - 斐波那契数列(FibSeq.js)
 - 凑零钱(ChargeCoins.js)
 - 爬梯子(ClimbStairs.js)
+- 求平方根近似值(Sqrt.js)
+- 最长上升子序列(LIS.js)
+- 八皇后(EightQueues.js)
+- 其他(others)

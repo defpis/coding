@@ -1,5 +1,5 @@
 /**
- * 获取最大上升子序列的长度
+ * 获取最长上升子序列的长度
  * @param {Array} arr 输入数组
  */
 function getLISLen(arr) {
@@ -18,7 +18,7 @@ function getLISLen(arr) {
 }
 
 /**
- * 获取最大上升子序列
+ * 获取最长上升子序列
  * @param {Array} arr 输入数组
  */
 function getLIS(arr) {

@@ -16,7 +16,7 @@ function helper(n, d = 0) {
 }
 
 /**
- * 判断一棵树是否纵轴对称
+ * 判断一棵树是否轴对称
  * @param {Node} root 根节点
  */
 function isSymmetric(root) {
