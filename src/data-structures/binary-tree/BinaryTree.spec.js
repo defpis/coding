@@ -10,6 +10,8 @@ const hasPathSum = require("./PathSum");
 const inOrderAndPostOrder = require("./build/InOrderAndPostOrder");
 const preOrderAndInOrder = require("./build/preOrderAndInOrder");
 const connect = require("./Connect");
+const serialize = require("./Serialize");
+const deserialize = require("./Deserialize");
 
 describe("BinaryTree", () => {
   describe("Traverse", () => {
@@ -187,6 +189,10 @@ describe("BinaryTree", () => {
       },
       next: null,
     });
+    done();
+  });
+  it("should serialize and deserialize work", (done) => {
+    expect(deserialize(serialize(binaryTree))).to.deep.equal(binaryTree);
     done();
   });
 });
