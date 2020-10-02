@@ -1,4 +1,4 @@
-function duplicateZeros(arr) {
+function duplicateZeroes(arr) {
   for (let i = 0; i < arr.length; i++) {
     if (arr[i] === 0) {
       let cursor = arr.length - 1;
@@ -12,4 +12,4 @@ function duplicateZeros(arr) {
   return arr;
 }
 
-module.exports = duplicateZeros;
+module.exports = duplicateZeroes;
